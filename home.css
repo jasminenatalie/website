@@ -1,4 +1,4 @@
-h1 {
+  h1 {
     color: #421820;
     font-family: genty demo;
 }
@@ -10,7 +10,7 @@ h3 {
     color: #421820;
     font-family: poppins;
 }
-h6 {
+p {
     color: #421820;
     font-family: poppins;
 }
