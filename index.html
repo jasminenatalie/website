@@ -1,25 +1,152 @@
 <!DOCTYPE html>
 <html>
-    <title>Jasmine Natalie</title>
-    <body style="background-color: rgba(236, 232, 229, 0.966);"></body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="about .css">
-    <br><br><br><br><br><br><br><br><br>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+  <section style="background-color: rgb(0, 0, 0);">
+  <div id="navbar">
+    <style>
+      /* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0);
+}
 
-<h1 class="type1">
+/* Navbar links */
+.hamburger {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+.title {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+    </style>
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+  <script>
+    /* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+  </script>
+<style>
+  /* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="home.html">Home</a>
+    <a href="https://drive.google.com/file/d/1XSdragRQaGE4PesyPxS1r7tR0z4frxDM/view?usp=sharing">Portfolio</a>
+    <a href="coming soon.html">Coming Soon</a>
+    <a href="about.html">About</a>
+  </div>
+
+</div>
+<!-- Use any element to open/show the overlay navigation menu -->
+
+<h1 class="title" style="color: rgb(255, 255, 255); align-self: center;"><img src="star.png" width=50px><b>HOME</b></h1>
+<span class="hamburger" onclick="openNav()"><img src="white hamburger bar.png" width="50px"></span>
+  </div>
+  <h1 class="type1">
     <style>
         .type1 {
             display: grid;
             justify-content: center;
             font-size: 400%;
-            font-family: poppins;
         }
     </style>
     <div class="container">
         <div class="row">
             <div class="col-sm">
-    <p class="hvr-shrink"><b>Hello,</p> <p class="hvr-skew-forward"><i>enchanté</i></b></p>
+    <p class="hvr-shrink" style="color: white;"><b>Hello,</p> <p class="hvr-skew-forward" style="color: thistle;"><i>enchanté!</i></b></p>
+    </div></div></div></h1>
 <style>
     .hvr-shrink {
   display: inline-block;
@@ -57,67 +184,9 @@
   
 
 </style>
-</div>
-    <div class="col-">
-    <img class="hvr-pulse-grow" src=https://cdn-icons-png.flaticon.com/128/569/569501.png width=50px height=50px> 
-    <style>
-        @-webkit-keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
-@keyframes hvr-pulse-grow {
-  to {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
-.hvr-pulse-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
-  -webkit-animation-name: hvr-pulse-grow;
-  animation-name: hvr-pulse-grow;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-    </style>
-</div></div></div>
-</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-<a class="type1 hvr-forward" href="home.html">
-    <img src="https://cdn-icons-png.flaticon.com/128/545/545682.png" height="100">
-    <style>
-        .hvr-forward {
-  display: grid;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
-  -webkit-transform: translateX(8px);
-  transform: translateX(8px);
-}
-
-    </style>
-</a></div></div></div>
+  <h1 style="text-align: center; display: grid; justify-content: center; color: #f2f2f2; font-size: 300%; font-family: poppins; src: url(Poppins-Regular.ttf) format(ttf);">I am Jasmine Natalie, a <br>designer and art student</h1>
+<br>
+</section>
+<section style="background-color: rgb(255, 255, 255);">
+</section>
 </html>
-

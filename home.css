@@ -1,36 +1,36 @@
   h1 {
-    color: #421820;
-    font-family: genty demo;
+    font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 h2 {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 h3 {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 p {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 ul {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 table {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 a {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 input {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
 button {
-    color: #421820;
     font-family: poppins;
+    src: url(Poppins-Regular.ttf) format(ttf); 
 }
