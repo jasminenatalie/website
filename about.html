@@ -1,158 +1,260 @@
 <!DOCTYPE html>
-<html>
-    <body style="background-color: rgba(236, 232, 229, 0.966);"></body>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
-    <link rel="stylesheet" href="about .css">
-    <title>About</title>
-
-
-<div id="mySidebar" class="sidebar">
-    <script>
-        function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-      }
-    </script>
+<html style="overflow-x: hidden">
+  <head>
     
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="hover.css">
+    <link rel="icon" type="image/x-icon" href="649753.png">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+
+    <title>ABOUT</title>  
+<body style="overflow-x: hidden">
+<section style="background-color: rgb(0, 0, 0); flex-wrap: wrap;">
+<!--NAVIGATION BAR-->
+  <div id="navbar">
     <style>
-        .sidebar {
-          height: 100%; 
-          width: 0; 
-          position: fixed; 
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111; 
-          overflow-x: hidden; 
-          padding-top: 60px; 
-          transition: 0.5s;
-        }
-        
-        .sidebar a {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-size: 25px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-        }
-        
-        .sidebar a:hover {
-          color: #f1f1f1;
-        }
-        
-        .sidebar .closebtn {
-          position: absolute;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;
-        }
-        
-        .openbtn {
-          font-size: 20px;
-          cursor: pointer;
-          color: rgb(0, 0, 0);
-          padding: 10px 15px;
-          border: none;
-        }
-        
-        .openbtn:hover {
-          background-color: #444;
-        }
-        
-        #main {
-          transition: margin-left .5s; 
-          padding: 20px;
-        }
-        
-        @media screen and (max-height: 450px) {
-          .sidebar {padding-top: 15px;}
-          .sidebar a {font-size: 18px;}
-        }
+      #navbar {
+      overflow: hidden;
+      background-color: rgba(51, 51, 51, 0);}
+
+      .hamburger {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;}
+      .title {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;}
+
+      .content {
+        padding: 16px;}
+
+      .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;}
+
+      .sticky + .content {
+  padding-top: 60px;}
     </style>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="home.html">Home</a>
+
+<!-- Navbar overlay -->
+<div id="myNav" class="overlay">
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";}
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";}
+  </script>
+
+<!--Overlay Styling-->
+<style>
+  .overlay {  
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    }
+
+  @media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    }
+</style>
+
+<!-- Button to close the overlay navigation -->
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+<!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
     <a href="https://drive.google.com/file/d/1XSdragRQaGE4PesyPxS1r7tR0z4frxDM/view?usp=sharing">Portfolio</a>
     <a href="coming soon.html">Coming Soon</a>
     <a href="about.html">About</a>
   </div>
-  
-  <div id="main">
-    <button class="openbtn" onclick="openNav()">&#9776;</button>
-  </div>
+</div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <h1>Hello, I'm Jasmine</h1>
-        
-            <h2 class="type2" >                
-                <style>    
-                .type2 {
-                        padding: 0%;
-                        }
-                </style>
-            I'm an aspiring fashion designer and journalist who is currently a 10th grade student at BINUS SCHOOL SERPONG</h2>           
-        <br>
-            <table>
-                <th>This is what I do :)</th>
-                <tr>
-                    <td>Fashion Design</td>
-                    <td>Fashion Illustration</td>
-                </tr>
-                <tr>
-                    <td>Graphic Design</td>
-                    <td>Styling</td>               
-                </tr>
-                <tr>
-                    <td>Writing</td>
-                </tr>
-                </table>
+<h1 class="title" 
+  style="color: rgb(255, 255, 255); padding-left: 50px; align-self: center; font-family: poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; src: url(Poppins-Regular.ttf) format(ttf); ">
+  <b class="hvr-grow">✽ ABOUT</b>
+</h1>
+  <span class="hamburger" onclick="openNav()" style="padding-right: 50px; padding-top: 35px;"><img class="hvr-grow" src="white hamburger bar.png" width="40px"></span>
+</div>
+
+<hr style="background-color: rgb(255, 255, 255); margin-left: 50px; margin-right: 50px;"><br>
+
+<!--TITLE SECTION-->
+<div data-aos="fade-up" class="container" style="padding-left: auto; padding-right: auto; width: 70%;">
+  <div class="row">
+    <div class="col-sm" style="padding-top: 20px;">
+      <h1 style="display: grid; margin-left: auto; margin-right: auto; vertical-align: middle; font-family: poppins; color: white;">
+      <p class="hvr-skew-forward" style="font-size: 50px;"><b>Hello!</b></p>
+
+      <p style="font-size: 35px;">I’m <i style="color: thistle;">Jasmine Natalie</i> but you can call me Jas ;></p>
+ 
+      <p style="font-size: 30px; color: rgb(175, 175, 175);">I am an art student, <i style="color: rgba(216, 191, 216, 0.822);">fashion designer</i>, and writer.</p>
+
+      <a href="https://drive.google.com/file/d/1qUjtcafpGBARflMljY84Y36P0Bp-m4-w/view" class="btn btn-primary, border-0, hvr-glow" style="border-radius: 20px; width: fit-content; font-size: 20px; color: rgb(0, 0, 0); background-color: thistle; margin-top: 50px; margin-bottom: 60px;">View My CV</a>
+      </h1>    
     </div>
-        <div class="col-">
-            <img class="type3" src="https://media-exp1.licdn.com/dms/image/C5603AQGUYwOqi1P9ZA/profile-displayphoto-shrink_400_400/0/1634863291497?e=1645660800&v=beta&t=3xDzVm6g5j_NR2uPwyBemhlZB8T6uKeYh57Xk4SE2FA" 
-            alt=”alternate text” width="150">
-        <style>
-            .type3 {
-                    width: 150px;
-                    height: 150px;
-                    padding:0%;
-                    }
-        </style>
+    <div class="col-sm">
+      <img src="Screenshot_20220119-141114_Instagram-removebg-preview.png"  style="display: grid; margin-left: auto; margin-right: auto;width: 300px;">
+    </div>
+  </div>
+</div>
+</section>
+
+<!--ABOUT PART 1-->
+<section style="background-color: thistle;">
+<div data-aos="fade-up" class="container" style="padding-left: auto; padding-right: auto; width: 70%;">
+  <div class="row">    
+    <div class="col-sm" style="padding-top: 20px;">
+      <br>
+      <h4 style="text-align: left; font-family: poppins; width: 350px; margin-right: auto;">I taught myself from a very young age how to draw stick figures and cartoons not thinking too much about it.<br> Not long after, little me was introduced to a whole new world of creative opportunities and my first dream of being a graphic designer was born.</h4>
+      <br>
+      <img src="temporary.png" width="350px" style="display: block; margin-right: auto;  border-radius: 25px;">
+    </div>
+    <div class="col-sm" style="padding-top: 20px;">
+      <br>
+      <img src="temporary.png" width="350px" height="300px" style="display: block; margin-left: auto; border-radius: 25px;">
+      <br>
+      <h4 style="font-family: poppins; width: 350px; margin-left: auto; text-align: right;">I was able to fulfill that hobby by joining organizations such as Bye Bye Plastic Bags as a graphic designer. I became familiar with the creative workflow and am now able to work under pressure in a fast-paced environment without sacrificing the quality of my art.</h4>
+      <a href="https://drive.google.com/file/d/1qUjtcafpGBARflMljY84Y36P0Bp-m4-w/view" class="btn btn-primary, border-0, hvr-glow" style="border-radius: 20px; width: fit-content; font-size:17px; color: thistle; background-color: rgb(0, 0, 0); display: block; margin-top: 15px; margin-bottom: 25px; margin-left: auto;">Portfolio</a>
+    <br>
+    </div>
+
+  </div>
+</div>  
+
+  <div data-aos="fade-up" class="container" style="padding-left: auto; padding-right: auto; width: 70%;">
+    <div class="row" style="margin-top: 12vw; margin-bottom: 12vw;">
+      <div class="col-sm" style="padding-top: 20px;">
+        <h2 style="font-family: poppins; text-align: center; font-size: 32px; color: rgb(0, 0, 0);">My heart was set on going to design school and becoming a graphic designer. Then when quarantine hit, I came across Next in Fashion and was instantly hooked by this part of the design world I’ve never considered being in. That moment was when I knew it was what I wanted to do.</h2>
+      <br><br>
+      </div>
+    </div>
+  </div>  
+</section>
+<!--WHAT NEXT SECTION-->
+<section style="background-color: black;">
+  <div data-aos="fade-up" class="container" style="padding-left: auto; padding-right: auto; width: 70%;">
+    <div class="row">    
+      <div class="col-sm">
+        <h2 style="text-align: left; font-family: poppins; width: 350px; margin-right: auto; font-size: 100px; margin-top: 12vw; margin-bottom: 12vw;"><b>So, <br>What's <br>Next?</b></h2>
+      </div>
+      <div class="col-sm">
+        <h4 style="font-size: 25px; font-family: poppins; padding-right: auto; width: 420px; margin-left: auto; margin-right: 10px; margin-top: 15vw; margin-bottom: 12vw;">I continue to seek new opportunities to further my aspirations of being a fashion designer without letting go of my graphic design skills.  While I continue to learn more about the wide world of design, I’ll continue to hold on to my dream of owning my own fashion brand or publication one day!</h4>
+      </div>
+    </div>
+  </div>  
+</section>
+
+<!--CONTACT SECTION-->
+
+<section style="background-color: rgb(255, 255, 255);">
+  <br><br><br><br><br>
+
+<div data-aos="fade-up" class="container" style="padding-left: auto; padding-right: auto; width: 70%;">
+  <div class="row">
+    <div class="col-sm">
+      <h2 style="font-size: 355%; font-family: poppins; text-align: center;"><b>Contact Me!</b></h2>
+      <br><br>
+      <img src="phone.png" width=320px class="hvr-buzz-out" style="display: block; margin-left: auto; margin-right: auto;"> 
+    </div>
+    <div class="col-sm">
+      <h3 style="font-family: poppins; vertical-align: middle;">I'm always looking to meet new people so feel free to say hello!
+        <br><br> Let's stay in touch. You can find my email <u><a href="mailto:jasminentlie@gmail.com">here</a></u>.
+        <br><br>
+        Want to keep up with my future projects? Visit my other socials for occasional sneak peeks ;></h3>
+        <br><br><br><br><br><br><br>
+        <table style="margin-right: 0; margin-left: auto;">
+          <tr>
+            <td class="hvr-float-shadow" style="padding: 5px;">
+                              <a href="https://www.instagram.com/jasminenataliee/">
+                                  <img src="instagram.png" width="50" alt="instagram">
+                              </a>      
+            </td>
+            <td class="hvr-float-shadow" style="padding: 5px;">
+                              <a href="https://www.linkedin.com/in/jasmine-natalie-kartawidjaja-63454521b/">
+                                  <img src="linkedin.png" height=50 alt="linkedin">
+                              </a>          
+            </td>
+            <td class="hvr-float-shadow" style="padding-left: 5px;"> 
+                              <a href="https://pin.it/3c1xfCu">
+                                  <img src="pinterest.png" width="50" alt="pinterest">
+                              </a>      
+            </td>
+          </tr>
+        </table>
+
     </div>
   </div>
 </div>
 
-<br>
+<br><br><br><br><br>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-            <h6><b>Let's keep in touch</b></h6>
-                <a href="https://www.instagram.com/jasminenataliee/">
-                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" width="30" height="30" alt="">
-                </a>
+</section>
 
-                <a href="https://www.instagram.com/jasminenataliee/">
-                    <img src="https://cdn-icons.flaticon.com/png/128/739/premium/739247.png?token=exp=1640226373~hmac=14a890710c46bb9db82dbfac2522133b" width="30" height="30" alt="">
-                </a>
-            
-                <a href="mailto:jasminentlie@gmail.com">
-                    <img src="https://cdn-icons.flaticon.com/png/128/2213/premium/2213470.png?token=exp=1640175498~hmac=c7a52514c9eb4c734e8f612750b9d2cb" height="30" alt="">
-                </a>
+<!--END SECTION-->
 
-                <a href="https://www.linkedin.com/in/jasmine-natalie-kartawidjaja-63454521b/">
-                    <img src=https://cdn-icons-png.flaticon.com/128/1384/1384088.png height=30>
-                </a>
-              </div>
+<section style="background-color: black;">
+  <br><br><br>
 
-        </div>
-    </div>    
+<p style="color: white; font-size: 15px; text-align: center; padding: 10px;">© 2022 - Jasmine Natalie</p>
 
+  <br><br>
+</section>
+</body>
 </html>
